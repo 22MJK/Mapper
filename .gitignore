@@ -1,0 +1,45 @@
+# Build outputs
+/build/
+/build-*/
+/cmake-build-*/
+/mapper_demo
+*.o
+*.obj
+*.exe
+*.dll
+*.dylib
+*.so
+*.a
+*.lib
+*.exp
+
+# Python and OS cache
+.DS_Store
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+.venv-*/
+
+# Local run outputs and scratch data
+/output/
+/outputs/
+/artifacts/
+/inputtopology/
+/inputworkload/
+/test*.json
+/*.jso
+
+# Local experiment corpora and paper artifacts
+/workloads/
+/hpcg/
+/tgrl_hpcg/
+/tgrl_hpcg.tar.gz
+/thesis_latex/
+/thesis_thuthesis/
+/thuthesis-v7/
+/workload_sparse/matrix_data/
+
+# Generated profiling artifacts and vendored binary dependencies
+/workload_sparse/fitting_tools/ncu_*.csv
+/workload_sparse/fitting_tools/openblas/
