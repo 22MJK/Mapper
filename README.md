@@ -222,11 +222,3 @@ Request shapes used in experiments:
 | `examples/` | Small topology, workload, and LLM config examples. |
 | `visualize/` | Taskflow and workload visualization scripts. |
 | `workload_sparse/` | Sparse workload generators and profiling helper source. |
-
-## Data Policy
-
-The public source tree intentionally excludes large local datasets, profiling
-logs, generated binaries, paper build artifacts, and experiment outputs. These
-paths are ignored in `.gitignore`, including `workloads/`, `outputs/`,
-`workload_sparse/matrix_data/`, `workload_sparse/fitting_tools/ncu_*.csv`, and
-`workload_sparse/fitting_tools/openblas/`.
