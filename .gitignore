@@ -38,8 +38,5 @@ __pycache__/
 /thesis_latex/
 /thesis_thuthesis/
 /thuthesis-v7/
-/workload_sparse/matrix_data/
 
 # Generated profiling artifacts and vendored binary dependencies
-/workload_sparse/fitting_tools/ncu_*.csv
-/workload_sparse/fitting_tools/openblas/
