@@ -18,8 +18,8 @@ inline std::string normalize_operator_name(std::string value) {
     return value;
 }
 
-// C++ mirror of profiles.enums.OperatorKind. Mapper operator parsing must go
-// through this profile catalog before any cost or parallelism logic sees a task.
+// Canonical operator names accepted by the mapper. Operator parsing must go
+// through this catalog before any cost or parallelism logic sees a task.
 inline const std::unordered_set<std::string>& operator_profile_names() {
     static const std::unordered_set<std::string> values = {
         "scal",
@@ -140,7 +140,7 @@ inline std::string require_operator_profile_name(const std::string& value) {
     const auto canonical = canonical_operator_profile_name(value);
     if (operator_profile_names().count(canonical) == 0) {
         throw std::runtime_error("Unsupported operator '" + value +
-                                 "': mapper operator parsing is restricted to operator profiles");
+                                 "': mapper operator parsing is restricted to supported operator names");
     }
     return canonical;
 }
