@@ -173,3 +173,8 @@ python3 visualize/taskflow_viz.py \
 | `workload/` | Workload JSON parser. |
 | `taskflow/` | Chakra-ET-style taskflow writer. |
 | `visualize/` | Taskflow and workload visualization scripts. |
+
+## License
+
+Copyright (c) 2026 Yuchen Fan, Minghong Sun, Jikui Ma, and Shunyu Mao.
+Released under the [MIT License](LICENSE).
