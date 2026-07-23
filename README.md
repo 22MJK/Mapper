@@ -2,8 +2,8 @@
 
 Mapper is a C++20 task-to-device mapping tool for heterogeneous systems. It reads
 a hardware topology and a workload description, estimates compute and
-communication cost, assigns tasks to devices, and writes a Chakra-ET-style
-`taskflow.json`.
+communication cost, assigns tasks to devices, and writes taskflow JSON or
+per-rank Chakra ET traces.
 
 Mapper supports two input paths:
 
