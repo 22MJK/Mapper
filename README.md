@@ -40,8 +40,8 @@ Use `--workload` when the task graph already exists:
 
 ```bash
 ./mapper_demo \
-  --hardware=path/to/topology.json \
-  --workload=path/to/workload.json \
+  --hardware=../tools/examples/topologies/tc_2gpu_1cpu_switch_memory_pool.json \
+  --workload=examples/cg_iteration_workload.json \
   --mapper=aeft \
   --parallel=auto \
   --out=output/taskflow.json
@@ -54,8 +54,8 @@ configuration:
 
 ```bash
 ./mapper_demo \
-  --hardware=path/to/topology.json \
-  --llm-config=path/to/model_config.json \
+  --hardware=../tools/examples/topologies/tc_2gpu_1cpu_switch_memory_pool.json \
+  --llm-config=examples/qwenconfig.json \
   --llm-prompt-len=128 \
   --llm-decode-steps=16 \
   --llm-tp=2 \
@@ -69,9 +69,8 @@ For configs that contain multiple model sizes, add `--llm-size`:
 
 ```bash
 ./mapper_demo \
-  --hardware=path/to/topology.json \
-  --llm-config=path/to/model_config.json \
-  --llm-size=13B \
+  --hardware=../tools/examples/topologies/tc_8xA800_NVLink_2cpu_upi.json \
+  --llm-config=examples/llama_config.json \
   --llm-prompt-len=128 \
   --llm-decode-steps=16 \
   --llm-auto-parallel \
@@ -102,8 +101,8 @@ split GPU-compatible tasks by GPU rank:
 
 ```bash
 ./mapper_demo \
-  --hardware=path/to/topology.json \
-  --workload=path/to/workload.json \
+  --hardware=../tools/examples/topologies/tc_8xA800_NVLink_2cpu_upi.json \
+  --workload=examples/cg_iteration_workload.json \
   --workload-rank-parallel \
   --mapper=aeft \
   --dump-workload=output/rank_workload.json \
@@ -120,8 +119,8 @@ number of GPUs in the topology:
 
 ```bash
 ./mapper_demo \
-  --hardware=path/to/topology.json \
-  --llm-config=path/to/model_config.json \
+  --hardware=../tools/examples/topologies/tc_8xA800_NVLink_2cpu_upi.json \
+  --llm-config=examples/qwenconfig.json \
   --llm-prompt-len=128 \
   --llm-decode-steps=16 \
   --llm-use-all-gpus \
@@ -156,8 +155,8 @@ python3 visualize/taskflow_viz.py \
 
 ```bash
 ./mapper_demo \
-  --hardware=path/to/topology.json \
-  --workload=path/to/workload.json \
+  --hardware=../tools/examples/topologies/tc_2gpu_1cpu_switch_memory_pool.json \
+  --workload=examples/cg_iteration_workload.json \
   --out=output/taskflow.json \
   --viz
 ```
